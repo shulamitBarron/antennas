@@ -104,7 +104,7 @@ const appRoutes: Routes = [
     HttpModule
     , AgmCoreModule.forRoot(
       {
-        apiKey: 'AIzaSyDj_YflnC50-74abdppmv8MpRjuRJpiMvM'
+        apiKey: 'AIzaSyDwhpwH-sptvHkdXGwkeoKzcVjDQW0Af6o'
         , libraries: ["places"]
       }), MDBBootstrapModule.forRoot()
   ],
