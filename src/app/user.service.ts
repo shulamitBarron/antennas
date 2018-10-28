@@ -49,7 +49,7 @@ export class UserService {
   }
 
   //   checkconnectToServerAdmin(): Observable<any> {
-  //     return this.http.get("http://localhost:9895/api/login")
+  //     return this.http.get("http://antenna.somee.com/api/login")
   //         .map((response: any) => response)
   //         .catch((response: HttpErrorResponse) => Observable.throw(response));
   // }

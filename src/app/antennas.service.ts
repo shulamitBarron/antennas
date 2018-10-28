@@ -25,7 +25,7 @@ public isBest:boolean=false;
       this.isBest=false;
     }
 
-    return this.http.get(`http://localhost:54599/api/radius?x=${x}&y=${y}`).subscribe((res) => {
+    return this.http.get(`http://antenna.somee.com/api/radius?x=${x}&y=${y}`).subscribe((res) => {
       // this.hideSpinner();
       // id: this.dictList.length + 1
       this.dictList.reverse().push({ address, antennas: res });
@@ -38,7 +38,7 @@ public isBest:boolean=false;
   getBestCompany() {
     this.showsSpinner();
     const companies = this.companyList;
-    return this.http.post(`http://localhost:54599/api/company`, companies)
+    return this.http.post(`http://antenna.somee.com/api/company`, companies)
     
   }
   getAllDictCompany() {
@@ -46,7 +46,7 @@ public isBest:boolean=false;
   }
 
   getStatisticCompany() {
-    return this.http.get(`http://localhost:54599/api/company`);
+    return this.http.get(`http://antenna.somee.com/api/company`);
   }
   removeAdress(adress) {
     
