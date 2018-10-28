@@ -24,7 +24,7 @@ export class UserService {
   }
   add(user: User) {
     this.showsSpinner();
-      return this.http.post("http://antenna.somee.com/api/register", user)
+      return this.http.post("https://antennas.azurewebsites.net/api/register", user)
       .subscribe(res => {
         this.hideSpinner();
         localStorage.setItem('userToken', JSON.stringify(user));
@@ -40,7 +40,7 @@ export class UserService {
 
   loginUser(user: any) {
     this.showsSpinner();
-    return this.http.post("http://antenna.somee.com/api/login", user).toPromise()
+    return this.http.post("https://antennas.azurewebsites.net/api/login", user).toPromise()
       .then(res => {
         this.hideSpinner();
         localStorage.setItem('userToken', JSON.stringify(user));
@@ -49,7 +49,7 @@ export class UserService {
   }
 
   //   checkconnectToServerAdmin(): Observable<any> {
-  //     return this.http.get("http://antenna.somee.com/api/login")
+  //     return this.http.get("https://antennas.azurewebsites.net/api/login")
   //         .map((response: any) => response)
   //         .catch((response: HttpErrorResponse) => Observable.throw(response));
   // }
